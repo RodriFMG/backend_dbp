@@ -12,7 +12,9 @@ import java.util.List;
 @Entity
 @JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" }, allowSetters = true)
 @Table(name = "compra")
-public class Compra {
+
+
+public class Compra{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
