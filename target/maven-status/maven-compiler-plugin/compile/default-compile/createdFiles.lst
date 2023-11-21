@@ -1,0 +1,17 @@
+com\example\micro1\Service\BebidaService.class
+com\example\micro1\Domain\Snack.class
+com\example\micro1\application\CafeController.class
+com\example\micro1\Infrastracture\BebidaRepository.class
+com\example\micro1\Domain\Bebida.class
+com\example\micro1\Service\SnackService.class
+com\example\micro1\application\SnackController.class
+com\example\micro1\Infrastracture\ProductoRepository.class
+com\example\micro1\Domain\Cafe.class
+com\example\micro1\Infrastracture\CafeRepository.class
+com\example\micro1\Micro1Application.class
+com\example\micro1\application\ProductoController.class
+com\example\micro1\Domain\Producto.class
+com\example\micro1\Infrastracture\SnackRepository.class
+com\example\micro1\Service\CafeService.class
+com\example\micro1\application\BebidaController.class
+com\example\micro1\Service\ProductoService.class
