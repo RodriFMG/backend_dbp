@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("/compra")
+@CrossOrigin(origins = "http://localhost:19006")
 public class CompraController {
 
     @Autowired

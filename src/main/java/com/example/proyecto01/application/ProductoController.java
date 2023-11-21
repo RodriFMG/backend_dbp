@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("/producto")
+@CrossOrigin(origins = "http://localhost:19006")
 public class ProductoController {
     @Autowired
     private ProductoService productoService;
@@ -51,4 +52,16 @@ public class ProductoController {
         Optional<Producto> deletedProducto = productoService.deleteProducto(id);
         return deletedProducto.isPresent() ? ResponseEntity.status(200).body("Deleted") : ResponseEntity.status(404).body("Not Found");
     }
+
+    @GetMapping("/{name}")
+    public ResponseEntity<Producto> BuscarNombre(@PathVariable String name) {
+        Optional<Producto> producto = productoService.getNameProducto(name);
+
+        if (producto.isPresent()) {
+            return ResponseEntity.ok(producto.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

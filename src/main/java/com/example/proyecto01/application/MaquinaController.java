@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("/maquina")
+@CrossOrigin(origins = "http://localhost:19006")
 public class MaquinaController {
     @Autowired
     private MaquinaService maquinaService;

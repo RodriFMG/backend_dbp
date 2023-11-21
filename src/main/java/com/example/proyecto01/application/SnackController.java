@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/snack")
+@CrossOrigin(origins = "http://localhost:19006")
 public class SnackController {
 
     @Autowired

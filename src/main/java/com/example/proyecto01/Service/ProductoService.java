@@ -7,6 +7,7 @@ import com.example.proyecto01.infrastracture.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,9 +74,16 @@ public class ProductoService {
         return optionalProducto;
     }
 
-    public Optional<Producto> getProducto(Long id) {
-        return productoRepository.findById(id);
+    public Optional<Producto> getNameProducto(String name) {
+        List<Producto> productos_buscar = productoRepository.findAll();
+        Optional<Producto> retorno = Optional.empty();
+
+        for (Producto buscar : productos_buscar) {
+            if (name.equals(buscar.getNombre())) {
+                retorno = Optional.of(buscar);
+                break;
+            }
+        }
+        return retorno;
     }
-
-
 }
